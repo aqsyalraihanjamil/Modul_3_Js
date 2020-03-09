@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width">
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Load Java Script -->
+  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <title>Login</title>
+  <script type="text/javascript">
+    function Login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var element = "";
+      if (username == "qwerty" && password == "123456789") {
+        element += "<div class='alert alert-success alert-dismissible'>";
+        element += "<span class= 'close' data-dismiss='alert'>&times; </span>";
+        element += "<h4>Login Berhasil</h4>";
+        element += "Anda Berhasil login mantappu...!";
+        element += "</div>";
+      } else {
+        element += "<div class='alert alert-success alert-dismissible'>";
+        element += "<span class= 'close' data-dismiss='alert'>&times; </span>";
+        element += "<h4>Login Gagal</h4>";
+        element += "Sad Gagal Slurr...!";
+        element += "</div>";
+      }
+      document.getElementById('login-body').innerHTML;
+      document.getElementById('apalah').innerHTML += element;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card col-sm-4" id="card">
+      <div class="card-header bg-primary text-white text-center">
+        <h4>LOGIN FORM</h4>
+      </div>
+      <div class="card-body" id="apalah">
+
+      </div>
+      <div class="card-body alert" id="login-body">
+        username
+        <div class="col-sm-12">
+          <input type="text" id="username" class="form-control">
+        </div>
+        Password
+        <div class="col-sm-12">
+          <input type="password" id="password" class="form-control">
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary btn-block" onclick="Login();">
+          LOGIN
+        </button>
+      </div>
+    </div>
+    </div>
+</body>
+
+</html>

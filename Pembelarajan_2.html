@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Set and Get</title>
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Load Java Script -->
+  <script src="bootstrap/js/jquery.min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript">
+    count = () => {
+      // mengambil nilai dari elemen (get value)
+      let panjang = document.getElementById('panjang').value;
+      let lebar = document.getElementById('lebar').value;
+      let hasil = panjang * lebar;
+      // menentukan nilai pada elemen (set value)
+      document.getElementById('hasil').value = hasil;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card col-sm-4">
+      <div class="card-header">
+        <h4>Hitung Luas Persegi Panjang</h4>
+      </div>
+      <div class="card-body">
+        <!-- let panjang digunakan untuk mendapat value dengan id yang sama -->
+        Panjang
+        <input type="number" id="panjang" class="form-control">
+        <!-- let lebar digunakan untuk mendapat value dengan id yang sama -->
+        Lebar
+        <input type="number" id="lebar" class="form-control">
+        <button type="button" class="btn btn-info btn-block" onclick="count()">
+          <!-- Tombol hitung untuk memanggil fungsi count -->
+        Hitung
+        </button>
+        <!-- Tombol hasil berfungsi sebagai memanggil hasil pada fungsi count-->
+        Hasil
+        <input type="text" id="hasil" class="form-control" readonly>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

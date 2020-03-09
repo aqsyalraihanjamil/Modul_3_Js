@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alert</title>
+    <!-- Load Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Load Java Script -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="card col-sm-4">
+          <div class="card-header bg-primary text-white">
+            <h4>Basic Alert</h4>
+          </div>
+          <div class="card-body">
+            <button type="button" class="btn btn-success"
+              onclick="alert('Thank you for your click')">
+              <!-- Jika mengklik ke tombol tersebut maka akan muncul telks diatas -->
+            Klik Disini
+            </button>
+             <button type="button" class="btn btn-info"
+             onmouseover="alert('Thank you for your hover')">
+             <!-- Jika menggeser ke tombol tersebut akan muncul teks diatas -->
+             Geser Donk
+            </button>
+          </div>
+        </div>
+          <div class="card col-sm-4">
+            <div class="card-header bg-success text-white">
+              <h4>Dynamic Alert</h4>
+            </div>
+            <div class="card-body">
+
+              <input type="text" id="message" class="form-control">
+              <button type="button" class="btn btn-success"
+              onclick="alert(document.getElementById('message').value)">
+              <!-- mengambil isi dari elemen dengan id = "message" -->
+              Show
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
